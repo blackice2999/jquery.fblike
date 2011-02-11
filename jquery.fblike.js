@@ -1,6 +1,7 @@
 /**
- * simple facebook like me wrapper plugin, so user must be confirm before he can see the right facebook button!
  * @Author: Dennis Brücke <db@joomlates.de>
+ *
+ * simple facebook like me wrapper plugin, so user must be confirm before he can see the right facebook button!
  *
  * there are a lot improvements if someone has more interest about that talk to me
  * and this will be a full jquery plugin.
