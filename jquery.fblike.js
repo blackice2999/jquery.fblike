@@ -6,6 +6,36 @@
  * and this will be a full jquery plugin.
  *
  * License: GPL v2
+ *
+ * Dependicies:
+ * This plugin need´s that following libraries are loaded:
+ * jquery > 1.4
+ * jquery.ui > 1.7
+ * jquery.cookie
+ *
+ *
+ * Using the script:
+ * You need two HTML Elements on your Page.
+ * 1. Add the Dialog text that you want to be displayed. The best position for that is directly before
+ *    </body> and after your last Element in your theme...
+ * Example:
+ * <div id="jl-fb-like-dialog-confirm">Here your disclaimer text for facebook...</div>
+ *
+ *
+ * 2. On every position on your page you want a Facebook Like button place a html element and attach the jquery plugin on it
+ *
+ * Example Element:
+ * <div class="jl-fb-like"></div>
+ *
+ * Example Javascript file:
+ * (function($) {
+ *  // search all facebook like buttons...
+ * $(document).ready(function(){
+ *     $('.jl-fb-like:not(processed)').addClass('processed').fblike();
+ *   });
+ *
+ * })(jQuery);
+ * 
  */
 (function ($) {
 
@@ -48,7 +78,6 @@
       }
       
       // init the dialog
-      // TODO: merge the options
       var fbDialogBtns = {
         buttons: {
           "Ok": function () {
