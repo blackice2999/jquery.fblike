@@ -112,6 +112,7 @@
     $.fn.fblike.defaults = {
         fbButtonText: 'Gef&auml;llt mir...',
         fbLikeSettings: {
+            href: windows.location.href,
             layout: 'standard',
             show_faces: 'true',
             width: '450',
