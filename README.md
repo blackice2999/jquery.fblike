@@ -18,6 +18,7 @@ click event.
 - add the jquery.fblike.js or jquery.fblike.min.js to the head of your page (after jquery / jquery.ui & jquery.cookie)
 - add the following code to your custom javascript or into head (after the script)
 
+      <script type="text/javascript">
       ;(function($) {
       // search all facebook like buttons...
       $(document).ready(function(){
@@ -29,3 +30,4 @@ click event.
         $('.jl-fb-like:not(.jl-fb-like-processed)').addClass('jl-fb-like-processed').fblike();
       });
       })(jQuery);
+      </script>
