@@ -27,8 +27,6 @@ click event.
 ## Options ##
 If you want more control over the settings we have four groups of options
 
-.fblike(fbDialogContentUrl, fbLikeSettings, fbDialogSettings, fbCookieSettings)
-
 - (string) fbDialogContentUrl = the url or path to your disclaimer
 - (object) fbLikeSettings = Facebook iFrame Options.
            Example: {colorscheme: 'dark'}
@@ -45,10 +43,12 @@ There are two ways to change the settings.
 
 2.) Options on .fblike() call.
         $('.jl-fb-like:not(.jl-fb-like-processed)').addClass('jl-fb-like-processed').fblike(
-          'http://your.domain.com/path/to/disclaimer.html',
-          {colorscheme: 'dark'},
-          {modal: true},
-          {expire: 1}
+          {
+            fbDialogContentUrl: 'http://your.domain.com/path/to/disclaimer.html',
+            fbLikeSettings:     {colorscheme: 'dark'},
+            fbDialogSettings:   {modal: true},
+            fbCookieSettings:   {expire: 1}
+          }
         );
 
 ## Example: ##

@@ -18,14 +18,11 @@
 (function ($) {
 
     // create new jquery plugin...
-    $.fn.fblike = function (fbDialogContentUrl, fbLikeSettings, fbDialogSettings, fbCookieSettings) {
+    $.fn.fblike = function (options) {
 
-        var options = {};
+        var options = $.extend(true, $.fn.fblike.defaults, options);
 
-        options.fbDialogContentUrl = $.extend({}, $.fn.fblike.defaults.fbDialogContentUrl, fbDialogContentUrl);
-        options.fbLikeSettings = $.extend({}, $.fn.fblike.defaults.fbLikeSettings, fbLikeSettings);
-        options.fbDialogSettings = $.extend({}, $.fn.fblike.defaults.fbDialogSettings, fbDialogSettings);
-        options.fbCookieSettings = $.extend({}, $.fn.fblike.defaults.fbCookieSettings, fbCookieSettings);
+        console.log(options);
 
         return this.each(function () {
 
@@ -109,6 +106,7 @@
 
             // trigger the dialog...  @TODO: ensure that dialog exists...
             function showFbLaw() {
+                
                 jlDialogContainer.dialog('open');
             }
         }); // return this each... jquery...

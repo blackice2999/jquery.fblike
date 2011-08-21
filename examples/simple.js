@@ -3,10 +3,12 @@
   $(document).ready(function(){
 
     // set path to disclaimer
-    $.fn.fblike.defaults.fbDialogContentUrl = 'http://yourdomain.com/disclaimer.html';
+    $.fn.fblike.defaults.fbDialogContentUrl = 'http://t.l/fb-like/jquery-fblike/examples/disclaimer.html';
 
     // init the plugin
-    $('.jl-fb-like:not(.jl-fb-like-processed)').addClass('jl-fb-like-processed').fblike();
+    $('.jl-fb-like:not(.jl-fb-like-processed)').addClass('jl-fb-like-processed').fblike({
+            fbLikeSettings: { colorscheme: 'dark'}
+        });
   });
 
 })(jQuery);
