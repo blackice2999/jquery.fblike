@@ -14,6 +14,10 @@ facebook like button.
 if a user has not already accepted your disclaimer this plugin creates a jquery.ui dialog and bind the element with a
 click event.
 
+## Demo: ##
+
+http://www.team-wd.de/projects/fblike/
+
 ## Usage: ##
 - add the jquery.fblike.js or jquery.fblike.min.js to the head of your page (after jquery / jquery.ui & jquery.cookie)
 - add the following code to your custom javascript (document ready)
