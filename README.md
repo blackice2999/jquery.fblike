@@ -57,3 +57,5 @@ there is a simple example in examples directory
 ## Warning: ##
 This plugin is more are proof of concept since a full working solution. It works, but it has no error handling. If you
 change parameters with failure this will not work and it will not throw any warnings...
+## Disclaimer URL ##
+You need to set a disclaimer url on same domain. Or it will not work! (see example)
