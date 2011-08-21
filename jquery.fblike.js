@@ -1,14 +1,14 @@
 /**
- * @Author: Dennis Brücke <db@joomlates.de>
+ * @Author: Dennis Bruecke <kontakt(at)team-wd.de>
  *
  * simple facebook like me wrapper plugin, so user must be confirm before he can see the right facebook button!
  *
- * there are a lot improvements possible. if someone has more interest about that talk to me
- * and this will be a full jquery plugin. currently it is more a case study.
+ * there are a lot improvements possible but currently this is only a proof of concept.
+ * if someone has more interest about that talk to me and this will be a full jquery plugin.
  *
- * License: GPL v2
+ * License: GPL v2 - http://www.gnu.org/licenses/gpl.html
  *
- * Dependicies:
+ * Dependencies:
  * This plugin need´s that following libraries are loaded:
  * jquery > 1.4
  * jquery.ui > 1.7
@@ -39,9 +39,11 @@
 
 
             function initDialog() {
+                // only proceed if we dont have any container
                 if(jlDialogContainer.length > 0) {
                   return;
                 }
+                
                 // init the dialog buttons
                 var fbDialogBtns = {
                     buttons: {
@@ -55,11 +57,15 @@
                     }
                 };
 
+                // add buttons to settings...
                 var fbDialogSettings = $.extend(options.fbDialogSettings, fbDialogBtns);
+
+                // create new dialog content
                 jlDialogContainer = $('<div id="jl-fb-like-dialog-container" style="display:none"></div>').appendTo('body');
                 // get content for dialog container via ajax
                 jlDialogContainer.load(
                     options.fbDialogContentUrl, {}, function(responseText, textStatus, XMLHttpRequest) {
+                        // bind jquery.ui dialog to container @TODO: error processing...
                         jlDialogContainer.dialog(fbDialogSettings);
                     }
                 );
@@ -131,6 +137,6 @@
             // current domain...
             domain: window.location.hostname
         },
-        fbDialogContentUrl: '/fb-like/jquery-fblike/examples/disclaimer.html'
+        fbDialogContentUrl: ''
     };
 })(jQuery);
