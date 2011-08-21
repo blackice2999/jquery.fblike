@@ -53,3 +53,7 @@ There are two ways to change the settings.
 
 ## Example: ##
 there is a simple example in examples directory
+
+## Warning: ##
+This plugin is more are proof of concept since a full working solution. It works, but it has no error handling. If you
+change parameters with failure this will not work and it will not throw any warnings...
