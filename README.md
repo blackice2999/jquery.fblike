@@ -16,18 +16,13 @@ click event.
 
 ## Usage: ##
 - add the jquery.fblike.js or jquery.fblike.min.js to the head of your page (after jquery / jquery.ui & jquery.cookie)
-- add the following code to your custom javascript or into head (after the script)
-
-      <script type="text/javascript">
-      ;(function($) {
-      // search all facebook like buttons...
-      $(document).ready(function(){
+- add the following code to your custom javascript (document ready)
 
         // set path to disclaimer
         $.fn.fblike.defaults.fbDialogContentUrl = 'http://your.domain.com/path/to/disclaimer.html';
 
         // init the plugin
         $('.jl-fb-like:not(.jl-fb-like-processed)').addClass('jl-fb-like-processed').fblike();
-      });
-      })(jQuery);
-      </script>
+
+## Example: ##
+there is a simple example in examples directory
