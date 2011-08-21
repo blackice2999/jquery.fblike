@@ -18,9 +18,18 @@
 (function ($) {
 
     // create new jquery plugin...
-    $.fn.fblike = function (options) {
+    $.fn.fblike = function (fbDialogContentUrl, fbLikeSettings, fbDialogSettings, fbCookieSettings) {
 
-        var options = $.extend($.fn.fblike.defaults, options);
+        var options = {};
+
+        options.fbDialogContentUrl = $.extend({}, $.fn.fblike.defaults.fbDialogContentUrl, fbDialogContentUrl);
+        options.fbLikeSettings = $.extend({}, $.fn.fblike.defaults.fbLikeSettings, fbLikeSettings);
+        options.fbDialogSettings = $.extend({}, $.fn.fblike.defaults.fbDialogSettings, fbDialogSettings);
+        options.fbCookieSettings = $.extend({}, $.fn.fblike.defaults.fbCookieSettings, fbCookieSettings);
+
+
+        console.dir(options);
+
         return this.each(function () {
 
             var obj = this;
@@ -36,7 +45,6 @@
                 initDialog();
                 addPseudoButton();
             }
-
 
             function initDialog() {
                 // only proceed if we dont have any container
@@ -110,9 +118,8 @@
     }; // plugin...
 
     $.fn.fblike.defaults = {
-        fbButtonText: 'Gef&auml;llt mir...',
         fbLikeSettings: {
-            href: windows.location.href,
+            href: window.location.href,
             layout: 'standard',
             show_faces: 'true',
             width: '450',

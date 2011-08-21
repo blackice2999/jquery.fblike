@@ -24,5 +24,32 @@ click event.
         // init the plugin
         $('.jl-fb-like:not(.jl-fb-like-processed)').addClass('jl-fb-like-processed').fblike();
 
+## Options ##
+If you want more control over the settings we have four groups of options
+
+.fblike(fbDialogContentUrl, fbLikeSettings, fbDialogSettings, fbCookieSettings)
+
+- (string) fbDialogContentUrl = the url or path to your disclaimer
+- (object) fbLikeSettings = Facebook iFrame Options.
+           Example: {colorscheme: 'dark'}
+- (object) fbDialogSettings = jQuery UI Dialog Options.
+           Example: {modal: true}
+- (object) fbCookieSettings = Cookie settings
+           Example: {expire: 1}
+
+There are two ways to change the settings.
+
+1.) Changing public default options.
+        $.fn.fblike.defaults.fbDialogContentUrl = 'http://your.domain.com/path/to/disclaimer.html';
+        $.fn.fblike.defaults.fbLikeSettings.colorscheme = 'dark';
+
+2.) Options on .fblike() call.
+        $('.jl-fb-like:not(.jl-fb-like-processed)').addClass('jl-fb-like-processed').fblike(
+          'http://your.domain.com/path/to/disclaimer.html',
+          {colorscheme: 'dark'},
+          {modal: true},
+          {expire: 1}
+        );
+
 ## Example: ##
 there is a simple example in examples directory

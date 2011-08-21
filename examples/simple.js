@@ -6,7 +6,10 @@
     $.fn.fblike.defaults.fbDialogContentUrl = 'http://t.l/fb-like/jquery-fblike/examples/disclaimer.html';
 
     // init the plugin
-    $('.jl-fb-like:not(.jl-fb-like-processed)').addClass('jl-fb-like-processed').fblike();
+    $('.jl-fb-like:not(.jl-fb-like-processed)').addClass('jl-fb-like-processed').fblike(
+        'http://t.l/fb-like/jquery-fblike/examples/disclaimer.html',
+        {colorscheme: 'dark'}
+    );
   });
 
 })(jQuery);
