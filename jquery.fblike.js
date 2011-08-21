@@ -27,9 +27,6 @@
         options.fbDialogSettings = $.extend({}, $.fn.fblike.defaults.fbDialogSettings, fbDialogSettings);
         options.fbCookieSettings = $.extend({}, $.fn.fblike.defaults.fbCookieSettings, fbCookieSettings);
 
-
-        console.dir(options);
-
         return this.each(function () {
 
             var obj = this;
