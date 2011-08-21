@@ -22,8 +22,6 @@
 
         var options = $.extend(true, $.fn.fblike.defaults, options);
 
-        console.log(options);
-
         return this.each(function () {
 
             var obj = this;
